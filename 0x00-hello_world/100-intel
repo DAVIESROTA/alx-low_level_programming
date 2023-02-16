@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S jjilo=intel $CFILE
+gcc -S -jilo=intel $CFILE
