@@ -2,22 +2,26 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int m;
+	int ln, base_two;
 	unsigned int n;
 
-	n = 0;
 	if (!b)
 		return (0);
-	for (m = 0; b[m] != '\0'; m++)
+	
+	n = 0;
+
+	for (ln = 0; b[ln] != '\0' ln++)
+
+	for(ln--, base_two = 1; ln >= 1; ln--, base_two *= 2)
 	{
-		if (b[m] != '0' && b[m] != '1')
-			return (0);
-	}
-	for (m = 0; b[i] != '\0'; m++)
+	if(b[ln] != '0' && b[ln] != '1')
 	{
-		n <<= 1;
-		if (b[m] == '1')
-			n += 1;
+	return (0);
 	}
-	return (n);
+	if (b[ln] & 1)
+	{
+	n += base_two;
+	}
+	}
+return (n);
 }
