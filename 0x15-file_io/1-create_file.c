@@ -17,13 +17,14 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 		text_content = "";
 
-	for (lettern = 0; text_content[lettern]; lettern++);
+	for (lettern = 0; text_content[lettern]; lettern++)
+		;
 
 	rwr = write(f, text_content, lettern);
-	 if (rwr == -1)
+	if (rwr == -1)
 		 return (-1);
 
-	 close; f;
+       	close(f);
 
 	 return (1);
 }
