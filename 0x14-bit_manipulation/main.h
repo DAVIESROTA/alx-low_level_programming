@@ -13,4 +13,3 @@ int get_endianness(void);
 
 
 #endif /* MAIN_H */
-
